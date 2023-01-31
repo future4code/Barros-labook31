@@ -1,0 +1,13 @@
+### Test
+GET http://localhost:3003/ping
+
+
+### Criar usuário
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{ 
+    "name": "fagnerfontes",
+    "email": "fagner@gmail.com",
+    "password": "582691"
+}
