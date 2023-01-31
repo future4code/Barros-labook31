@@ -7,7 +7,22 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 { 
-    "name": "fagnerfontes",
-    "email": "fagner@gmail.com",
+    "name": "Jackelyne Fontes batista",
+    "email": "jack@gmail.com",
     "password": "582691"
 }
+
+
+### Criar post
+POST http://localhost:3003/post
+Content-Type: application/json
+
+{ 
+   "photo": "https://picsum.photos/id/22/4434/3729", 
+   "description": "Bentley",
+   "type": "event",
+   "author_Id":"1675141016828"
+ 
+}
+
+##O post deve ser criado, passando-se as informações de: foto, descrição, data de criação e tipo ("normal" ou "evento").

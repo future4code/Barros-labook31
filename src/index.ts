@@ -6,6 +6,7 @@ import Knex from "knex"
 import connection from "./database/connection"
 import ping from "./endpoints/ping"
 import registrar from "./endpoints/registrar_usu"
+import createPost from "./endpoints/createpost"
 
 /* /**************************** CONFIG ******************************/
 
@@ -76,7 +77,7 @@ type post = {
    }
 }) */
 
-app.post('/post', async (req: Request, res: Response) => {
+/* app.post('/post', async (req: Request, res: Response) => {
    try {
       let message = "Success!"
 
@@ -101,7 +102,7 @@ app.post('/post', async (req: Request, res: Response) => {
       res.send({ message })
    }
 })
-
+ */
 app.get('/posts/:id', async (req: Request, res: Response) => {
    try {
       let message = "Success!"
@@ -139,6 +140,7 @@ app.get('/posts/:id', async (req: Request, res: Response) => {
 
 app.get("/ping",ping );
 app.post("/Users", registrar)
+app.post("/post", createPost)
 
 /**************************** SERVER INIT ******************************/
 
