@@ -5,11 +5,7 @@ import app from "../database/app"
 
 app.post('/post', async (req: Request, res: Response) => {
 
-/*    const id = req.body.id; 
-   const photo = req.body.photo
-   const description = req.body.description
-   const type = req.body.type 
-   const author_id = req.body.autor_id */
+
 
     try {
        let message = "Success!"

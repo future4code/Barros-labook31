@@ -7,6 +7,8 @@ import connection from "./database/connection"
 import ping from "./endpoints/ping"
 import registrar from "./endpoints/registrar_usu"
 import createPost from "./endpoints/createpost"
+import make_friendship from "./endpoints/post_id"
+import post_id from "./endpoints/post_id"
 
 /* /**************************** CONFIG ******************************/
 
@@ -35,7 +37,7 @@ enum POST_TYPES {
    EVENT = "event"
 }
 
-type post = {
+export type post = {
    id: string,
    photo: string,
    description: string,
@@ -103,7 +105,7 @@ type post = {
    }
 })
  */
-app.get('/posts/:id', async (req: Request, res: Response) => {
+/* app.get('/posts/:id', async (req: Request, res: Response) => {
    try {
       let message = "Success!"
 
@@ -135,12 +137,13 @@ app.get('/posts/:id', async (req: Request, res: Response) => {
       res.statusCode = 400
       res.send({ message })
    }
-})
+}) */
 
 
 app.get("/ping",ping );
 app.post("/Users", registrar)
 app.post("/post", createPost)
+app.get("/posts_id", post_id)
 
 /**************************** SERVER INIT ******************************/
 
