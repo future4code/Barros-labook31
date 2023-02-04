@@ -5,8 +5,6 @@ import app from "../database/app"
 
 app.post('/post', async (req: Request, res: Response) => {
 
-
-
     try {
        let message = "Success!"
  

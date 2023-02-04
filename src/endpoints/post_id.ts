@@ -6,11 +6,11 @@ app.get('/posts/:id', async (req: Request, res: Response) => {
     try {
        let message = "Success!"
  
-       const { id } = req.params
+       const { photo: id } = req.params
  
        const queryResult: any = await connection("labook_posts")
           .select("*")
-          .where({ id })
+          .where("id", id)
  
        if (!queryResult[0]) {
           res.statusCode = 404
