@@ -7,8 +7,8 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 { 
-    "name": "Jackelyne Fontes batista",
-    "email": "jack@gmail.com",
+    "name": "Jack Fontes Jatista",
+    "email": "july@gmail.com",
     "password": "582691"
 }
 
@@ -19,10 +19,26 @@ Content-Type: application/json
 
 { 
    "photo": "https://picsum.photos/id/22/4434/3729", 
-   "description": "Bentley",
+   "description": "BMW",
    "type": "event",
    "author_Id":"1675141016828"
  
 }
 
-##O post deve ser criado, passando-se as informações de: foto, descrição, data de criação e tipo ("normal" ou "evento").
+### Pegar o post pelo id 
+GET http://localhost:3003/posts/:id
+
+
+### Pegar cria amizade
+POST http://localhost:3003/friendship
+Content-Type: application/json
+
+{ 
+    "id": "1675141016828"
+}
+
+### Desfazer amizade
+DELETE http://localhost:3003//friendship/:user1Id/:user2Id
+
+### Pegar o post feed 
+GET http://localhost:3003/feed/:userId

@@ -11,10 +11,14 @@ import Knex from "knex"
 dotenv.config()
 
 
-const app: Express = express()
+ const app: Express = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors()) 
 
-
+ app.listen(3003, () => {
+    console.log("Conectado a porta 3003")
+ }) 
+ 
 
 export default app
+
