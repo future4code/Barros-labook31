@@ -7,7 +7,7 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 { 
-    "name": "July Fontes batista",
+    "name": "Jack Fontes Jatista",
     "email": "july@gmail.com",
     "password": "582691"
 }
@@ -25,15 +25,20 @@ Content-Type: application/json
  
 }
 
-### Pegar os usuários pelo id 
+### Pegar o post pelo id 
 GET http://localhost:3003/posts/:id
 
 
 ### Pegar cria amizade
-POST http://localhost:3003/fazerAmizade
+POST http://localhost:3003/friendship
 Content-Type: application/json
 
 { 
     "id": "1675141016828"
 }
 
+### Desfazer amizade
+DELETE http://localhost:3003//friendship/:user1Id/:user2Id
+
+### Pegar o post feed 
+GET http://localhost:3003/feed/:userId
